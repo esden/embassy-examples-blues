@@ -16,17 +16,14 @@ async fn main(_spawner: Spawner) {
     {
         use embassy_stm32::rcc::*;
         config.rcc.sys = Sysclk::PLL1_R;
-        config.rcc.hse = Some(Hse {
-            freq: Hertz::mhz(8),
-            mode: HseMode::Oscillator,
-        });
+        config.rcc.hsi = true;
         config.rcc.pll = Some(Pll {
-            source: PllSource::HSE,
+            source: PllSource::HSI,
             prediv: PllPreDiv::DIV1,
             mul: PllMul::MUL20,
             divp: None,
             divq: None,
-            divr: Some(PllRDiv::DIV2), // sysclk 80Mhz clock (8 / 1 * 20 / 2)
+            divr: Some(PllRDiv::DIV4), // sysclk 80Mhz clock (8 / 1 * 20 / 2)
         });
         config.rcc.ls = LsConfig::default_lse();
     }
