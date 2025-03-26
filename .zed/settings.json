@@ -15,7 +15,10 @@
           "target": "thumbv7em-none-eabi",
           "bins": true,
           "allTargets": false
-        }
+        },
+        "linked_projects": [
+          "swan/Cargo.toml",
+        ]
       }
     }
   }

@@ -5,5 +5,8 @@
       "--target",
       "thumbv7em-none-eabi",
       "--bins",
+  ],
+  "rust-analyzer.linkedProjects": [
+    "swan/Cargo.toml",
   ]
 }

@@ -251,6 +251,38 @@ dependencies = [
 ]
 
 [[package]]
+name = "embassy-examples-swan"
+version = "0.1.1"
+dependencies = [
+ "chrono",
+ "cortex-m",
+ "cortex-m-rt",
+ "defmt",
+ "defmt-rtt",
+ "embassy-embedded-hal",
+ "embassy-executor",
+ "embassy-futures",
+ "embassy-net",
+ "embassy-net-adin1110",
+ "embassy-stm32",
+ "embassy-sync",
+ "embassy-time",
+ "embassy-usb",
+ "embedded-hal 0.2.7",
+ "embedded-hal 1.0.0",
+ "embedded-hal-async",
+ "embedded-hal-bus",
+ "embedded-io",
+ "embedded-io-async",
+ "futures",
+ "heapless",
+ "micromath",
+ "panic-probe",
+ "rand",
+ "static_cell",
+]
+
+[[package]]
 name = "embassy-executor"
 version = "0.7.0"
 source = "git+https://github.com/embassy-rs/embassy.git#9edf5b7f049f95742b60b041e4443967d8a6b708"
@@ -385,38 +417,6 @@ dependencies = [
  "stm32-metapac",
  "vcell",
  "volatile-register",
-]
-
-[[package]]
-name = "embassy-stm32l4-examples"
-version = "0.1.1"
-dependencies = [
- "chrono",
- "cortex-m",
- "cortex-m-rt",
- "defmt",
- "defmt-rtt",
- "embassy-embedded-hal",
- "embassy-executor",
- "embassy-futures",
- "embassy-net",
- "embassy-net-adin1110",
- "embassy-stm32",
- "embassy-sync",
- "embassy-time",
- "embassy-usb",
- "embedded-hal 0.2.7",
- "embedded-hal 1.0.0",
- "embedded-hal-async",
- "embedded-hal-bus",
- "embedded-io",
- "embedded-io-async",
- "futures",
- "heapless",
- "micromath",
- "panic-probe",
- "rand",
- "static_cell",
 ]
 
 [[package]]
