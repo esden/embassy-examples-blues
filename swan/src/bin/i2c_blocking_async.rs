@@ -9,8 +9,10 @@ use embassy_stm32::time::Hertz;
 use embedded_hal_async::i2c::I2c as I2cTrait;
 use {defmt_rtt as _, panic_probe as _};
 
-const ADDRESS: u8 = 0x5F;
-const WHOAMI: u8 = 0x0F;
+// For this example we are using the Adafruit ICM-20948 IMU
+// connected to the on board Qwiic connector
+const ADDRESS: u8 = 0x69;
+const WHOAMI: u8 = 0x00;
 
 #[embassy_executor::main]
 async fn main(_spawner: Spawner) {
@@ -20,5 +22,5 @@ async fn main(_spawner: Spawner) {
 
     let mut data = [0u8; 1];
     unwrap!(i2c.write_read(ADDRESS, &[WHOAMI], &mut data).await);
-    info!("Whoami: {}", data[0]);
+    info!("Whoami: {:#X}", data[0]);
 }
