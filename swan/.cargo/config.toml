@@ -3,7 +3,7 @@
 #runner = "probe-rs run --chip STM32L475VGT6"
 #runner = "probe-rs run --chip STM32L475VG"
 #runner = "probe-rs run --chip STM32L4S5QI"
-runner = "probe-rs run --chip STM32L4R5ZITxP"
+runner = "probe-rs run --chip STM32L4R5ZIYx"
 
 [build]
 target = "thumbv7em-none-eabi"
