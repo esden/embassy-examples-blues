@@ -8,5 +8,6 @@
   ],
   "rust-analyzer.linkedProjects": [
     "swan/Cargo.toml",
+    "cygnet/Cargo.toml",
   ]
 }

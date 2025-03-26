@@ -18,6 +18,7 @@
         },
         "linked_projects": [
           "swan/Cargo.toml",
+          "cygnet/Cargo.toml"
         ]
       }
     }
