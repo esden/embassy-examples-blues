@@ -14,6 +14,7 @@ async fn main(_spawner: Spawner) {
     info!("Hello World!");
 
     // NOTE: the MCO pin is not routed to any pins on the Swan board
+    // we are still leaving this example in for reference
     let _mco = Mco::new(p.MCO, p.PA8, McoSource::HSI, McoPrescaler::DIV1);
 
     let mut led = Output::new(p.PE2, Level::High, Speed::Low);
