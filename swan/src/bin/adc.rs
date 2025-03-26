@@ -18,12 +18,17 @@ fn main() -> ! {
     let p = embassy_stm32::init(config);
 
     let mut adc = Adc::new(p.ADC1);
-    //adc.enable_vref();
+    adc.enable_vrefint();
     adc.set_resolution(Resolution::BITS8);
-    let mut channel = p.PC0;
+    // Measuring the +VMAIN
+    let mut channel = p.PA0;
 
     loop {
         let v = adc.blocking_read(&mut channel);
-        info!("--> {}", v);
+        // Our reference voltage is VIO which is 3.3V by default.
+        let v_meas = v as f64 * (3.3 / u8::MAX as f64);
+        // +VMAIN has a R1 = 10MOhm and R2 = 4.3MOhm voltage divider
+        let voltage = (v_meas as f64 * (10.0 + 4.3)) / 4.3;
+        info!("--> {} {}V", v, voltage);
     }
 }
