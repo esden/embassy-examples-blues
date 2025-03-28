@@ -30,8 +30,8 @@ Not all examples are fully tested on the Swan due to lack of hardware. Here is a
 * [ ] tsc_async
 * [ ] tsc_blocking
 * [ ] tsc_multipin
-* [ ] usart
-* [ ] usart_dma
+* [x] usart
+* [x] usart_dma
 * [x] usb_serial
 
 # Contributions
